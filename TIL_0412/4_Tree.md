@@ -1,4 +1,4 @@
-## Tree
+# Tree
 
 * 정점과 간선을 이용하여 데이터의 배치 형태를 추상화한 자료 구조
 
@@ -77,13 +77,143 @@ class BinaryTree :
 
 * 전체 이진 트리의 depth() = left subtree의 depth()와 right subtree의 depth() 중 더 큰 것 + 1
 
-~~~~연습문제~~~~
+```python
+class Node :
+    def __init__(self, item) :
+        self.data = item
+        self.left = None
+        self.right = None
+
+    def size(self) :
+        l = self.left.size() if self.left else 0
+        r = self.right.size() if self.right else 0
+        return l + r + 1
+
+    def depth(self) :
+        l = self.left.depth() if self.left else 0
+        r = self.right.size() if self.right else 0
+        return max(l, r) + 1
+```
+```python
+class BinaryTree :
+    def __init__(self, r) :
+        self.root = r
+
+    def size(self) :
+        if self.root : 
+            return self.root.size()
+        else :
+            return 0
+
+    def depth(self) :
+        if self.root : 
+            return self.root.depth()
+        else:
+            return 0
+
+```
 
 
 ## 이진 트리의 순회
 ### 깊이 우선 순회
-* 중위 순회
-* 전위 순회
-* 후위 순회
 
-### 넓이 우선 순회
+(1) 중위 순회
+
+* 순회의 순서 : Left -> 자기자신 -> Right
+
+```python
+class Node :
+    def inorder(self) :
+        traversal = []
+        if self.left :
+            traversal += self.left.inorder()
+        traversal.append(self.data)
+        if self.right : 
+            traversal += self.right.inorder()
+        return traversal
+```
+
+(2) 전위 순회
+
+* 순회의 순서 : 자기 자신 -> Left -> Right
+
+```python
+class Node :
+    def preorder(self) :
+        traversal = []
+        traversal.append(self.data)
+        if self.left :
+            traversal += self.left.preorder()
+        if self.right :
+            traversal += self.right.preorder()
+        return traversal
+```
+
+(3) 후위 순회
+
+* 순회의 순서 : Left -> Right -> 자기 자신
+
+
+```python
+class Node :
+    def postorder(self) :
+        traversal = []
+        if self.left :
+            traversal += self.left.preorder()
+        if self.right :
+            traversal += self.right.preorder()
+        traversal.append(self.data)
+        return traversal
+```
+
+## 넓이 우선 순회 (BFS)
+
+* 원칙
+    * 수준(level)이 낮은 노드를 우선으로 방문
+    * 같은 수준의 노드들 사이에는
+        * 부모 노드의 방문 순서에 따라 방문
+        * 왼쪽 자식 노드를 오른쪽 자식보다 먼저 방문
+
+    * 재귀적 방법이 적합한가?
+        * 적합하지 않다!!
+
+* 한 노드를 방문했을 때
+    * 나중에 방문할 노드들을 순서대로 기록해두어야 한다
+    * 큐(Queue)를 이용하자!
+
+### 넓이 우선 순회 알고리즘 궇현
+(1) (초기화) traversal : 빈 리스트, q : 빈 큐
+(2) 빈 트리가 아니면, root node를 큐에 추가 (enqueue)
+(3) q가 비어있지 않은 동안
+    * node <- queue에서 원소 추출 (dequeue)
+    * node를 방문
+    * node의 왼쪽, 오른쪽 자식 (있으면) 들을 queue에 추가
+(4) queue가 빈 큐가 되면 모든 노드 방문 완료
+
+```python
+class BinaryTree :
+    
+    def __init__(self, r) :
+        self.root = r
+
+    def bft(self) :
+        
+        queue = ArrayQueue()
+        traversal = []
+
+        # root가 존재할 때
+        if self.root :
+            
+            queue.enqueue(self.root) 
+
+            while not queue.isEmpty() :
+                node = queue.deque()
+                if node.left :
+                    queue.enqueue(node.left)
+                if node.right :
+                    queue.enqueue(node.right)
+                traversal.append(node.data)
+            
+        return traversal
+```
+
