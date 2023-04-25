@@ -4,9 +4,7 @@
 👉 좋은 코드란 무엇인가?
 * [좋은 코드란 무엇일까?](./1_code_style_guide.md)
 * [코드 리뷰](./2_code_review.md)
-
-### 학습 내용
-
+* [셀레니움](./3_Selenium.ipynb)
 
 ### 생각 정리
 
