@@ -1,9 +1,19 @@
 ## 23.04.24
 
-* Django 시작하기
+### Django 시작하기
+
+> 방법에 대한 학습과정은 노션 페이지에 정리 - 첨부한 사진이 많아서 ... 
+
+* [Django 시작하기](https://evening-november-9ec.notion.site/Django-fe19a9d0c3d0472eba52cf801ac3b611)
+
+* [Django Admin](https://evening-november-9ec.notion.site/Django-Admin-5cca3d0304be496b89c358a57d0c1986)
+
+* [Django Shell](https://evening-november-9ec.notion.site/Django-Shell-2f7f055b5b6e43ab87645d2d493a4abb)
 
 
-https://docs.djangoproject.com/ko/4.2/
+### 참고자료
+[Django 공식 Document 페이지](https://docs.djangoproject.com/ko/4.2/)
+* Filter Look UP 함수
 
 ### 관계형 데이터베이스 (RDB)
 
