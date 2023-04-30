@@ -53,8 +53,8 @@
 |---|---|---|---|:---:|
 | 23.04.24 | [TIL#11](/Week_3/TIL_0424/) | 파이썬 장고 프레임웍을 사용해 API 서버 만들기 |  Django 시작하기 & Django Admin & Django Shell | ✅ |
 | 23.04.25 | [TIL#12](/Week_3/TIL_0425)   | 파이썬 장고 프레임웍을 사용해 API 서버 만들기 |  View와 Template & Django Admin 커스터마이징 |  ✅  | 
-| 23.04.26 | [TIL#13](/Week_3/TIL_0426)    | 파이썬 장고 프레임웍을 사용해 API 서버 만들기 |  Serializer & API Path 만들기 & Git 강의  | ✅ | 
-| 23.04.27 | [TIL#14](/Week_3/TIL_0427)    | 파이썬 장고 프레임웍을 사용해 API 서버 만들기 |    |    | 
+| 23.04.26 | [TIL#13](/Week_3/TIL_0426)    | 파이썬 장고 프레임웍을 사용해 API 서버 만들기 |  Serializer & DRF & Class 기반 View & Git 강의  | ✅ | 
+| 23.04.27 | [TIL#14](/Week_3/TIL_0427)    | 파이썬 장고 프레임웍을 사용해 API 서버 만들기 | User와 인증 & Git 강의 |  ✅  | 
 | 23.04.28 |     | 파이썬 장고 프레임웍을 사용해 API 서버 만들기 |    |    | 
 
 

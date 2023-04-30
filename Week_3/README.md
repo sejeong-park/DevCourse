@@ -17,3 +17,4 @@
 | 5 | [DRF - Srializer](https://evening-november-9ec.notion.site/DRF-Serializer-cccf9619490c4414bcfafcc7f8bc38b1)|
 | 6 | [DRF - REST framework](https://evening-november-9ec.notion.site/DRF-Django-REST-Framework-f6a4a1820e414afaab11eb03b0254e27) |
 | 7 | [DFR - Class 기반의 View로 리팩토링](https://evening-november-9ec.notion.site/DRF-Class-Views-Feat-Mixin-Generics-953d27a14c084353b60f4ac7ad3db62b) |
+| 8 | [User와 인증](https://evening-november-9ec.notion.site/User-Authentication-abc7e9ed4c07488a867ac10fb260b659) |
